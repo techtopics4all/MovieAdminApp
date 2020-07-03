@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Movie List</title>
+
+</head>
+<body>
+<h2>Movie List </h2>
+<div th:unless="${#lists.isEmpty(movies)}">
+	<dl th:each="movie : ${movies}">
+	<dt class="bookHeadline">
+	<span th:text="${movie.name}">Movie Name</span> by
+	<span th:text="${movie.description}">Movie Description</span>
+</body>
+
+</html>

@@ -31,11 +31,10 @@ public class MovieListController {
 	}
 	
 	
-	@RequestMapping(value="/movies",method=RequestMethod.POST, consumes = "application/json")
+	@RequestMapping(value="/movies",method=RequestMethod.POST, consumes = "application/json")	
 	public ResponseEntity<Object> addMovie(@RequestBody Movie movie) {
 		movieListRepository.save(movie);		
         return ResponseEntity.ok().build();
-
 	}
 	
 	
